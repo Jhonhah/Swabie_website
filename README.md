@@ -1,2 +1,3 @@
 # First_website
- First website with css and html
+ My first website while learning css and html
+ 
