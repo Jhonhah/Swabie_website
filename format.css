@@ -1,4 +1,7 @@
 /* styles for all*/
+:root {
+  --text-color: deeppink;
+}
 .nav {  
   list-style-type: none;  
   margin: 0;  
@@ -12,7 +15,7 @@
   
 li a {  
   display: block;  
-  color: pink;  
+  color: pink; 
  font-size:20px;  
   text-align: center;  
   padding: 10px 20px;  
@@ -23,46 +26,145 @@ li a:hover {
   background-color: rgb(156, 60, 156);  
   color: aqua;  
 } 
-p,li,figure figcaption {
-  color: rgb(236, 119, 138);
+p,li {
+  color: var(--text-color);
+     
 }
 
-
 /* for welcome page */
+.left {
+  float: left;
+  position:absolute;
+}
+.right {
+  float: right;
+}
 .main
 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: deeppink;
+    color: var(--text-color);
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 310px;
+    margin-right: auto;
+    
+   
 }
+
+.frame {
+  display: block;
+  align-content: center;
+  margin-left: 400px;
+  margin-right: 370;
+}
+.art {
+  margin-top: 100px;
+  margin-right: 65;
+  float: left;
+}
+
 .container {
-  display: grid;
-  align-items: center; 
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 5px;
+  display: flex;
+  align-items:flex-start;
+  flex-direction: row; 
+  width: 46%;
+  gap: 10px;
+  margin-top: 100px;
+  }
+
+ .art2 {
+  margin-top: -310px;
+  float: right;
+  margin-right: -50px;
+ }
+ #body {
+    padding-right: 150px;
  }
  
- .image {
-   max-width: 50%;
+ .snake {
+   max-width: 50%; /*use some clamp*/
    max-height:50%;
  }
 
  .small {
   font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom:-65px;
  }
  
  .text {
    font-size: 70px;
  }
+ .notes p{
+  font-family: cursive;
+ }
 
 /*for socials page*/
-
-.socials {
-  border: 2ch;
+.head {
+  text-align:start;
+  font-family: monospace;
 }
-.socials a img {
+.socials {
+  display: grid;
+  grid-template-rows:100px, 100px, 100px;
+  grid-template-columns: 100px, 100px, 100px ;
+ 
+}
+.youtube, .tiktok, .snapchat, .insta, .facebook, .twitter {
+  width:40%;
+}
+.youtube, .insta, .twitter {
+  margin-left: -600px;
+}
+.tiktok, .snapchat, .facebook {
+  margin-left: 30px;
+}
+.youtube {
+    grid-column: 3;
+}
+
+.insta {
+    grid-column: 3;
+}
+.socials div a img {
   height: 80px;
   width: 99px;
 }
+.onlyfans {
+    grid-column: 2;
+  grid-row: 3;
+  margin-top: 90px;
+  margin-left: -375px;
+  
+}
+.twitter {
+    grid-column:3;
+}
+.panther {
+  grid-row: 1 / 4;
+  grid-column: 2;
+  margin-left: -400px;
+}
+.socials img:hover {
+  transform: scale(1.2);
+}
 /*for about page*/
+ /*display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: aqua;
+  justify-content: space-evenly;
+  align-items:flex-start;
+  width: 50%;
+  /*flex-wrap: wrap;
+  align-content:space-between;
+  gap: 1em; */
+
+  footer {
+    background-color:antiquewhite;
+    text-align: center;
+    font-size: large;
+    font-family:cursive;
+  }
+  footer p{
+    color:pink;
+  }
